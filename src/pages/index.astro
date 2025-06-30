@@ -3,7 +3,7 @@ import { graphQLClient, gql } from '../lib/graphql';
 
 const GET_MINDLOOKER_POSTS = gql`
   query GetMindlookerPosts {
-    posts(where: { categoryName: "Mindlooker Insights" }) {
+    posts(where: { categoryNameIn: ["mindlooker", "all"] }) {
       nodes {
         title
         uri
