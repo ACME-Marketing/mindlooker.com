@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/core/Hero.astro';
+---
+
+<BaseLayout title="About MindLooker - A New Perspective">
+  <Hero
+    title="About MindLooker"
+    subtitle="We believe that you are the expert on you. Our mission is to provide a radically neutral space for you to explore your own mind and find your own answers."
+  />
+
+  <section class="container mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-extrabold text-brand-text mb-6">
+          Our Philosophy
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+          Traditional therapy often puts the practitioner in the expert seat, creating an unintentional hierarchy. MindLooker was founded on a simple, powerful idea: what if we removed that hierarchy completely?
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          We don't give advice, offer diagnoses, or tell you what to work on. We provide a proven, non-directive process that allows you to look at what's truly there, without judgment or external interpretation. This is a space for your truth.
+        </p>
+      </div>
+      <div>
+        <!-- Placeholder for an image of the founder or an abstract graphic -->
+        <div class="bg-brand-secondary rounded-lg shadow-lg aspect-square p-8">
+          <p class="text-white text-center text-xl">Founder Image Placeholder</p>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-background py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-extrabold text-brand-text mb-6">
+          Meet the Founder
+        </h2>
+        <p class="text-lg max-w-3xl mx-auto text-gray-700 leading-relaxed">
+          [A brief bio of the founder will go here, outlining their journey, their experience since 1994, and what led them to create the MindLooker 1-on-1 Session as a powerful alternative to mainstream methods.]
+        </p>
+      </div>
+  </section>
+</BaseLayout>

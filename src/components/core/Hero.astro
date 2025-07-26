@@ -8,8 +8,15 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative bg-brand-secondary text-white overflow-hidden">
-  <div class="container mx-auto px-6 py-24 md:py-32 relative z-10">
+<section class="relative bg-brand-background text-white pb-20 overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-[95%] bg-gradient-to-br from-brand-primary to-brand-secondary"></div>
+  <div class="absolute bottom-0 left-0 w-full text-brand-background">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-auto fill-current">
+      <path d="M0,50 C400,100 1000,0 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+  </div>
+
+  <div class="container mx-auto px-6 pt-24 md:pt-32 relative z-10">
     <div class="max-w-3xl text-center md:text-left">
       <h1 class="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-md">
         {title}
@@ -18,14 +25,20 @@ const {
         {subtitle}
       </p>
       <div class="mt-10">
-        <a href={ctaLink} class="bg-brand-accent text-white font-bold py-4 px-8 rounded-button text-lg uppercase tracking-wide transition duration-300 transform hover:scale-105 inline-block">
-          {ctaText}
-        </a>
+        {ctaLink && ctaLink !== '#' ? (
+          <a href={ctaLink} class="bg-brand-accent text-white font-bold py-4 px-8 rounded-button text-lg uppercase tracking-wide transition duration-300 transform hover:scale-105 inline-block">
+            {ctaText}
+          </a>
+        ) : (
+          <button
+            data-cal-link="takealook/mindlooker-free-session"
+            data-cal-namespace="30min"
+            data-cal-config='{"layout":"month_view"}'
+            class="bg-brand-accent text-white font-bold py-4 px-8 rounded-button text-lg uppercase tracking-wide transition duration-300 transform hover:scale-105 inline-block">
+            {ctaText}
+          </button>
+        )}
       </div>
     </div>
   </div>
-  <div
-    class="absolute bottom-0 left-0 w-full h-full bg-brand-primary"
-    style="clip-path: polygon(0 0, 100% 0, 100% 40%, 0% 100%);"
-  ></div>
 </section>

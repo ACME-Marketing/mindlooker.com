@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllPosts } from '../../lib/wordpress.js';
+
+const allPosts = await getAllPosts();
+---
+<BaseLayout title="Blog">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-4">Blog</h1>
+    <ul>
+      {allPosts.edges.map(({ node }) => (
+        <li class="mb-4">
+          <a href={`/blog/${node.slug}`} class="text-2xl font-bold hover:underline">{node.title}</a>
+          <p class="text-gray-600">{new Date(node.date).toLocaleDateString()}</p>
+          <div set:html={node.excerpt} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

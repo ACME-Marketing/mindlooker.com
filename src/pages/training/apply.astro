@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ApplicationForm from '../../components/forms/ApplicationForm.astro';
+---
+<BaseLayout title="Apply for Training - MindLooker">
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl font-extrabold text-brand-text mb-4">Practitioner Training Application</h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-10">
+          We're excited you're taking the next step. Please fill out the application below to be considered for our next training cohort. We review applications on a rolling basis.
+        </p>
+      </div>
+
+      <ApplicationForm />
+      
+    </div>
+  </section>
+</BaseLayout>

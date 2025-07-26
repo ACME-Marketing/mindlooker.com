@@ -16,7 +16,13 @@ You MUST understand and reflect this in all work.
 3.  **Propose changes one step at a time.** Do not bundle unrelated changes.
 4.  **Mark tasks as complete** in `TASKS_ML.md` as they are finished.
 
-## 4. Coding & Naming Conventions
+## 4. Design Principles
+- **Hero Sections:** Must feature a wavy, non-linear bottom edge using the SVG gradient pattern established in `Hero.astro`.
+- **Buttons:** Must have rounded corners (`rounded-button`).
+- **Cards (`FeatureCard`, `TestimonialCard`, etc.):** Should use a subtle background color (`bg-brand-primary/10`) and colored headings to appear vibrant and engaging, not bland. This design should be applied consistently.
+- **Color Palette:** Adhere strictly to the colors defined in `tailwind.config.js`.
+
+## 5. Coding & Naming Conventions
 
 ### File Naming
 -   **Astro Components (`/src/components`):** PascalCase (e.g., `TestimonialCard.astro`)
@@ -29,13 +35,13 @@ You MUST understand and reflect this in all work.
 -   **JavaScript:** Follow modern ES6+ syntax. All code should be formatted with Prettier.
 -   **Astro:** Keep frontmatter minimal. Fetch data at the component/page level.
 
-## 5. Common Pitfalls to Avoid
+## 6. Common Pitfalls to Avoid
 -   **Do not write server-side code.** This is a static site. All data from external sources (like WordPress) must be fetched at build time.
 -   **Do not add a database or user authentication.** This is out of scope for the MVP.
 -   **Do not use jQuery** or other outdated libraries.
 -   **Do not make promises of outcomes.** Focus on explaining the *process* of the MindLooker 1-on-1 Session.
 
-## 6. Document Maintenance
+## 7. Document Maintenance
 -   If the architecture changes, update `PLANNING_ML.md`.
 -   If product requirements change, update `PRD_ML.md`.
 -   Keep `TASKS_ML.md` updated with your progress continuously.

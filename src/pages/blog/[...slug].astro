@@ -1,0 +1,25 @@
+---
+import PostLayout from '../../layouts/PostLayout.astro';
+import { getPostBySlug, getAllPosts } from '../../lib/wordpress';
+
+export async function getStaticPaths() {
+  const allPosts = await getAllPosts();
+
+  return allPosts.edges.map(({ node }) => {
+    return {
+      params: { slug: node.slug },
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const post = await getPostBySlug(slug);
+
+const frontmatter = {
+    title: post.title,
+    pubDate: post.date,
+}
+---
+<PostLayout frontmatter={frontmatter}>
+    <div set:html={post.content} />
+</PostLayout>

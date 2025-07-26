@@ -55,4 +55,26 @@ import TestimonialCard from '../components/cards/TestimonialCard.astro';
     </div>
   </section>
 
+<!-- CTA Section -->
+<section class="container mx-auto px-6 py-20 text-center">
+  <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">Book Your Free 30-Minute Session</h3>
+    <p class="text-gray-600 mb-6">
+      Choose a time that works for you. Sessions are conducted via phone, Google Meet, or Zoom.
+    </p>
+    
+    <button
+        data-cal-link="takealook/mindlooker-free-session"
+        data-cal-namespace="30min"
+        data-cal-config='{"layout":"month_view"}'
+        class="bg-brand-accent text-white font-bold py-4 px-10 rounded-button text-xl uppercase tracking-wide transition duration-300 transform hover:scale-105 inline-block">
+      Book Free Session
+    </button>
+    
+    <p class="text-sm text-gray-500 mt-6">
+      <strong>Note:</strong> The MindLooker process is not therapy, counseling, or medical treatment.
+      It's a different approach to examining your own material in a neutral space.
+    </p>
+  </div>
+</section>
 </BaseLayout>

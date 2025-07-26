@@ -7,3 +7,25 @@ body {
   @apply bg-brand-background text-brand-text;
   font-family: sans-serif;
 }
+
+.prose {
+  @apply text-gray-800 text-lg;
+}
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply font-bold;
+}
+.prose h1 {
+  @apply text-4xl mb-4;
+}
+.prose h2 {
+  @apply text-3xl mb-3;
+}
+.prose h3 {
+  @apply text-2xl mb-2;
+}
+.prose a {
+  @apply text-blue-600 hover:underline;
+}
+.prose p {
+    @apply mb-4;
+}

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/core/Hero.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+---
+
+<BaseLayout title="Practitioner Training - MindLooker">
+  <Hero
+    title="Become a MindLooker Practitioner"
+    subtitle="Are you a coach, therapist, or facilitator feeling limited by traditional models? Learn a powerful, non-directive methodology that creates profound, lasting change for your clients."
+    ctaText="Apply for Training"
+    ctaLink="/training/apply"
+  />
+
+  <section class="container mx-auto px-6 py-20">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-brand-text mb-6">
+        Move Beyond "Coping Skills"
+      </h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        So many practitioners feel stuck offering temporary solutions to deep-rooted problems. The MindLooker 1-on-1 Session provides a framework to help clients access their own wisdom and resolve issues at the source. It's not about managing symptoms; it's about facilitating genuine transformation.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-brand-background py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-extrabold text-brand-text text-center mb-12">
+        Why Train in This Modality?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <FeatureCard
+          title="Deliver Rapid Results"
+          description="Help clients achieve in hours what might take years in traditional therapy. This process is direct, efficient, and respects the client's time."
+        />
+        <FeatureCard
+          title="Remove Practitioner Burnout"
+          description="Step out of the 'expert' role. By holding a neutral space and trusting the client's process, you can facilitate powerful work without carrying the emotional weight."
+        />
+        <FeatureCard
+          title="A Unique, Marketable Skill"
+          description="Differentiate your practice by offering a truly unique, high-impact service that clients are actively searching for."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto px-6 py-20 text-center">
+    <h2 class="text-4xl font-extrabold text-brand-text mb-6">
+      Begin Your Journey
+    </h2>
+    <p class="text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto">
+      We are looking for dedicated practitioners who are ready to embrace a new paradigm. If this resonates with you, we invite you to apply for our next training cohort.
+    </p>
+    <a href="/training/apply" class="bg-brand-accent text-white font-bold py-4 px-10 rounded-button text-xl uppercase tracking-wide transition duration-300 transform hover:scale-105 inline-block">
+      Apply Now
+    </a>
+  </section>
+</BaseLayout>
