@@ -1,0 +1,26 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-brand-text text-brand-background mt-12">
+  <div class="container mx-auto px-6 py-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <p>&copy; {currentYear} MindLooker. All rights reserved.</p>
+        <p class="text-sm text-gray-400">A new perspective is waiting.</p>
+      </div>
+      <div class="text-center md:text-right">
+        <div class="space-x-4 mb-2">
+          <a href="/legal/privacy" class="hover:text-brand-primary">Privacy</a>
+          <a href="/legal/terms" class="hover:text-brand-primary">Terms</a>
+          <a href="/legal/disclaimer" class="hover:text-brand-primary">Disclaimer</a>
+        </div>
+        <div class="space-x-4">
+          <!-- TODO: Add social media links -->
+          <a href="#" class="hover:text-brand-primary">Twitter</a>
+          <a href="#" class="hover:text-brand-primary">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

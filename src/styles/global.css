@@ -1,4 +1,9 @@
-
+/* Set base styles for the entire site */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-brand-background text-brand-text;
+  font-family: sans-serif;
+}

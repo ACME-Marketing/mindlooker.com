@@ -1,0 +1,31 @@
+---
+// A reusable hero section with a compelling CTA and an angled design.
+const {
+  title = "See Yourself Clearly",
+  subtitle = "The MindLooker 1-on-1 Session is a revolutionary, non-directive alternative to traditional therapy. No judgment. No advice. Just a space for you to find your own answers.",
+  ctaText = "Book a Free Intro Session",
+  ctaLink = "#" // This will later link to the Cal.com booking
+} = Astro.props;
+---
+
+<section class="relative bg-brand-secondary text-white overflow-hidden">
+  <div class="container mx-auto px-6 py-24 md:py-32 relative z-10">
+    <div class="max-w-3xl text-center md:text-left">
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-md">
+        {title}
+      </h1>
+      <p class="mt-6 text-lg md:text-xl font-light max-w-2xl">
+        {subtitle}
+      </p>
+      <div class="mt-10">
+        <a href={ctaLink} class="bg-brand-accent text-white font-bold py-4 px-8 rounded-button text-lg uppercase tracking-wide transition duration-300 transform hover:scale-105 inline-block">
+          {ctaText}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="absolute bottom-0 left-0 w-full h-full bg-brand-primary"
+    style="clip-path: polygon(0 0, 100% 0, 100% 40%, 0% 100%);"
+  ></div>
+</section>

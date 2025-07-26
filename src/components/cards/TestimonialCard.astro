@@ -1,0 +1,18 @@
+---
+// A reusable card for displaying client testimonials.
+const {
+  quote = "This was a life-changing experience. I can't recommend it enough.",
+  author = "Jane Doe",
+  role = "Client"
+} = Astro.props;
+---
+
+<div class="bg-brand-primary bg-opacity-10 p-8 rounded-lg text-center h-full flex flex-col justify-center">
+  <p class="text-xl italic text-brand-text mb-6">
+    "{quote}"
+  </p>
+  <div class="font-bold text-brand-text">
+    &mdash; {author}
+    <span class="block text-sm font-normal text-gray-500">{role}</span>
+  </div>
+</div>
