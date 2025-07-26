@@ -21,8 +21,61 @@
       </button>
     </div>
     <div class="md:hidden">
-      <!-- Mobile menu button will go here -->
-      <button class="text-brand-text">Menu</button>
+      <button id="mobile-menu-button" class="text-brand-text p-2 hover:text-brand-primary">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </nav>
+  
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden">
+    <div class="bg-brand-background h-full w-64 fixed right-0 top-0 shadow-lg">
+      <div class="flex justify-between items-center p-6 border-b border-gray-200">
+        <span class="text-lg font-bold">
+          <span class="text-brand-primary">Mind</span><span class="text-brand-accent">Looker</span>
+        </span>
+        <button id="mobile-menu-close" class="text-brand-text hover:text-brand-primary">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col p-6 space-y-4">
+        <a href="/about" class="text-brand-text hover:text-brand-primary py-2">About</a>
+        <a href="/sessions" class="text-brand-text hover:text-brand-primary py-2">Sessions</a>
+        <a href="/blog" class="text-brand-text hover:text-brand-primary py-2">Blog</a>
+        <a href="/training" class="text-brand-text hover:text-brand-primary py-2">Practitioner Training</a>
+        <button
+            data-cal-link="takealook/mindlooker-free-session"
+            data-cal-namespace="30min-mobile"
+            data-cal-config='{"layout":"month_view"}'
+            class="bg-brand-accent text-white px-4 py-3 rounded-button hover:opacity-90 mt-4">
+          Book Free Session
+        </button>
+      </nav>
+    </div>
+  </div>
 </header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('hidden');
+  });
+  
+  mobileMenuClose?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden');
+  });
+  
+  // Close menu when clicking outside
+  mobileMenu?.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
